@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 100%;
+}
+
+.imgMobile {
+  display: none;
+}
+
+.leftSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8.51rem;
+  background: url(assets/images/bg-pattern-desktop.svg),
+    linear-gradient(150deg, #fff 0%, #fff4f4 84.51%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 4.68rem 10.31rem 4.68rem 10.31rem;
+}
+
+.leftSection span {
+  color: #ce9898;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 4rem;
+  font-weight: 300;
+  line-height: 4rem; /* 100% */
+  letter-spacing: 1.08256rem;
+}
+
+h1 {
+  color: #423a3a;
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 4.4375rem; /* 110.938% */
+  letter-spacing: 1.08256rem;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+p,
+::placeholder {
+  color: #ce9898;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.75rem; /* 175% */
+  margin: 2rem 0rem 2.5rem 0rem;
+}
+
+form {
+  position: relative;
+  width: 27.8125rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  outline: none;
+  border-radius: 1.75rem;
+  border: 1px solid rgba(206, 152, 152, 0.5);
+}
+
+input {
+  position: absolute;
+  width: 21.59rem;
+  height: 3.4rem;
+  background-color: transparent;
+  padding: 0.94rem 2rem 0.81rem 2rem;
+  outline: none;
+  border-radius: 1.75rem;
+  border: none;
+  opacity: 0.5;
+}
+
+/* remove the input focus red box, it will be in the wrong place. */
+input:focus {
+  color: #423a3a;
+  opacity: 1;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.75rem; /* 175% */
+  outline: none;
+  background-color: transparent;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #fff4f4 inset;
+}
+
+form:focus-within {
+  outline: 2px solid hsl(0, 93%, 68%);
+}
+
+form .error-icon {
+  display: inline-block;
+  position: absolute;
+  top: 16px;
+  right: 109px;
+  display: none;
+}
+
+form .error-msg {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  display: none;
+  color: #f96464;
+  font-family: Josefin Sans;
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.75rem; /* 215.385% */
+}
+
+form.error .error-msg,
+.container form.error .error-icon {
+  display: block;
+}
+
+form .error-icon,
+form .error-msg {
+  display: none;
+}
+
+form.error .error-icon,
+form.error .error-msg {
+  display: block;
+}
+
+button {
+  right: 0;
+  border: none;
+  width: 6.25rem;
+  height: 3.4rem;
+  cursor: pointer;
+  position: absolute;
+  align-items: center;
+  display: inline-flex;
+  border-radius: 100px;
+  justify-content: center;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  padding-left: 0px 20px 0px 20px;
+  font-family: "Josefin Sans", sans-serif;
+  background: linear-gradient(135deg, #f8bfbf 0%, #ee8b8b 100%);
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+}
+
+button:hover,
+button:focus {
+  box-shadow: 0px 15px 20px 0px rgba(198, 110, 110, 0.25);
+  background: linear-gradient(135deg, #f8bfbf 0%, #f8bfbf 100%);
+}
+
+.rightSection {
+  display: flex;
+  background: url(assets/images/hero-desktop.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.attribution {
+  padding-top: 20px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.attribution span {
+  color: #ce9898;
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 0rem;
+  letter-spacing: normal;
+}
+
+a:link {
+  color: #ce9898;
+  font-size: 10px;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #ce9898;
+  text-decoration: none;
+}
+
+a:hover {
+  color: hsl(0, 93%, 68%);
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 700px) {
+  body {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .logo img {
+    width: 6.25rem;
+    height: 1.30538rem;
+    margin: 1.94rem;
+  }
+
+  .imgMobile {
+    display: flex;
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+
+  .imgMobile img {
+    width: 100%;
+  }
+
+  .leftSection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0rem;
+    background: url(assets/images/bg-pattern-desktop.svg),
+      linear-gradient(150deg, #fff 0%, #fff4f4 84.51%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 0rem;
+  }
+
+  .leftSection span {
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 2.625rem; /* 105% */
+    letter-spacing: 0.67656rem;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 2.625rem; /* 105% */
+    letter-spacing: 0.67656rem;
+  }
+
+  p {
+    text-align: center;
+    font-family: Josefin Sans;
+    font-size: 0.875rem;
+    line-height: 1.375rem; /* 157.143% */
+    text-align: center;
+    margin: 1rem 2rem 2rem 2rem;
+  }
+
+  br {
+    display: none;
+  }
+
+  .info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  form {
+    width: 19.4375rem;
+    height: 3rem;
+  }
+
+  input {
+    width: 15.4375rem;
+    height: 1.2rem;
+  }
+
+  input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #fff4f4 inset;
+  }
+
+  form .error-icon {
+    display: inline-block;
+    position: absolute;
+    top: 12px;
+    right: 71px;
+    display: none;
+  }
+
+  form .error-msg {
+    position: absolute;
+    left: 1px;
+    top: 35px;
+    display: none;
+  }
+
+  button {
+    width: 4rem;
+    height: 3rem;
+    flex-shrink: 0;
+  }
+
+  .attribution {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .attribution span {
+    color: #ce9898;
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 0rem;
+    letter-spacing: normal;
+  }
+}
